@@ -203,8 +203,10 @@ html {
 
 /* main sections */
 main {
+   /* position: re; */
+   /* top: 40rem; */
    width: 80%;
-   margin: 20rem auto;
+   margin: 65rem auto;
    font-family: 'Manrope', sans-serif;
 }
 
@@ -598,10 +600,6 @@ main {
     
     .nav .close-nav {
        display: block;
-    }
-
-    .main .companies {
-        margin-top: -25rem !important;
     }
 
 
