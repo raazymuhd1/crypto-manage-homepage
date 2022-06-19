@@ -33,6 +33,7 @@ html {
     font-family: 'Manrope', sans-serif;
     text-align: center;
     box-sizing: border-box;
+    display: inline;
 }
 
 .header-drawer {
@@ -70,12 +71,13 @@ html {
 
 /* navbar */
 .nav {
-    position: relative;
-    top: -7.5rem;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    margin-top: -7rem;
     z-index: 1;
     font-size: var(--font-sm);
     color: var(--main-col);

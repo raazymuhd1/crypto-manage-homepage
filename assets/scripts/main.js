@@ -21,15 +21,29 @@ insertImages()
 
 
 // show / hide navbar
-const navbar = document.querySelector('.nav');
-const closeNav = document.querySelector('.close-nav');
-const drawer = document.querySelector('.drawer');
 
+const manipulateNavbar = () => {
+    const navbar = document.querySelector('.nav');
+    const closeNav = document.querySelector('.close-nav');
+    const drawer = document.querySelector('.drawer');
+    
+    drawer.addEventListener('click', () => {
+        navbar.style.visibility = "visible"
+    })
+    
+    closeNav.addEventListener('click', () => {
+        navbar.style.visibility = "hidden";
+    })
+    
+    // change navbar bg when scrolling
+    
+    window.addEventListener("scroll", () => {
+        const scrollHeight = navbar.offsetTop;
+        
+        if(scrollHeight >= 200) {
+            navbar.style.backgroundColor = "#3734A9"
+        }
+    })
+}
 
-drawer.addEventListener('click', () => {
-     navbar.style.visibility = "visible"
-})
-
-closeNav.addEventListener('click', () => {
-    navbar.style.visibility = "hidden";
-})
+manipulateNavbar()
