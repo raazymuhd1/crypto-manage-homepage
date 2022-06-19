@@ -20,4 +20,16 @@ const insertImages = () => {
 insertImages()
 
 
-// provide footer data
+// show / hide navbar
+const navbar = document.querySelector('.nav');
+const closeNav = document.querySelector('.close-nav');
+const drawer = document.querySelector('.drawer');
+
+
+drawer.addEventListener('click', () => {
+     navbar.style.visibility = "visible"
+})
+
+closeNav.addEventListener('click', () => {
+    navbar.style.visibility = "hidden";
+})

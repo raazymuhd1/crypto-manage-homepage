@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptos Manages</title>
+    <title> 
+       Manage Crypto
+    </title>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
     <header class="header">
+        <div class="header-drawer">
+            <h2> Cryptos </h2>
+            <span class="drawer"> 
+                <i class="fa-solid fa-bars"></i> 
+            </span>
+        </div>
         <nav class="nav">
+            <span class="close-nav"> 
+                <i class="fa-solid fa-xmark"></i>    
+            </span>
             <h2 class="title"> Cryptos </h2>
             <ul class="nav-links">
-                <li>Product</li>
-                <li>Template</li>
-                <li>Blog</li>
-                <li>Pricing</li>
+                <li> 
+                    <a href="#company"> Clients </a> 
+                </li>
+                <li> 
+                    <a href="#services"> Services </a> 
+                </li>
+                <li> 
+                    <a href="#features"> Features </a> 
+                </li>
+                <li> 
+                    <a href="#author"> Author </a> 
+                </li>
             </ul>
             <section class="nav-actions">
                 <p> Sign In </p>
@@ -32,7 +51,7 @@
                     <button class="btn-action"> Get Started </button>
                     <div class="btn-play-detail">
                         <span class="btn-play">
-                            <!-- icon -->
+                            <i class="fa-solid fa-play"></i>
                         </span>
                         <p> See How It Works </p>
                     </div>
@@ -45,14 +64,14 @@
     </header>
 
     <main>
-        <section class="companies">
+        <section id="company" class="companies">
             <p>Over 320k+ software business growing with us</p>
             <div class="companies-images">
 
             </div>
         </section>
 
-        <section class="features">
+        <section id="features" class="features">
             <div class="feature-one">
                 <img src="assets/images/main/features/Illustration.png" alt="">
                 <aside class="feature-details">
@@ -86,7 +105,7 @@
            
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <div class="services-details">
             <header>
                 <h2> 
@@ -180,6 +199,8 @@
         </section>
     </footer>
 
+    <!-- font awesome icons kit -->
+    <script src="https://kit.fontawesome.com/f542e52db0.js" crossorigin="anonymous"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
 </html>
