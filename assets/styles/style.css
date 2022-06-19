@@ -29,7 +29,7 @@ html {
 }
 
 .header {
-    min-height: 800px;
+    height: 800px;
     font-family: 'Manrope', sans-serif;
     text-align: center;
     box-sizing: border-box;
