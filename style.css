@@ -203,7 +203,7 @@ html {
 /* main sections */
 main {
    width: 80%;
-   margin: 65rem auto 10rem auto;
+   margin: 65rem auto 4rem auto;
    font-family: 'Manrope', sans-serif;
 }
 
@@ -343,36 +343,26 @@ main {
     height: 400px;
 }
 
-/* PROFILE */
-.profile {
-    height: 400px;
-    margin-top: 9rem;
-    border: 4px solid var(--main-bg);
-}
-
-
-/* FOOTER */
-.footer {
-    background: var(--second-bg);
-    min-height: 600px;
-    margin-top: 15rem;
-    font-family: 'Manrope', sans-serif;
-}
-
-.footer .footer-top {
+main .waitlist {
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--second-bg);
     padding: 4rem 6rem;
+    gap: 20px;
+    margin-top: 8rem;
     border-bottom: 1px solid #aaa;
 }
 
-.footer .footer-top > h2 {
+main .waitlist article > h2 {
     color: var(--main-col);
     font-size: var(--font-big);
     margin-bottom: 2rem;
 }
 
-.footer .footer-top > button {
+main .waitlist article > button {
     padding: 10px 20px;
     background: var(--orange-btn);
     border: var(--border-none); 
@@ -382,8 +372,70 @@ main {
     transition: opacity 300ms ease-in-out;
 }
 
-.footer .footer-top > button:hover {
+main .waitlist article > button:hover {
      opacity: .8;
+}
+
+/* PROFILE */
+.profile {
+    min-height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    border: 4px solid white;
+    color: var(--main-col);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.profile:hover {
+    background-color: var(--main-col);
+    color: black;
+}
+
+.profile-info {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-info h1 {
+    font-size: var(--font-big);
+}
+
+.profile-info .profile-img > img {
+    width: 200px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 20px 6px white;
+}
+
+.profile-info .profile-img {
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.profile .profile-details {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.profile .profile-details h4 {
+    padding-left: .3rem;
+    border-left: 4px solid var(--main-col);
+}
+
+/* FOOTER */
+.footer {
+    background: var(--second-bg);
+    min-height: 600px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .footer .footer-center {
@@ -396,27 +448,36 @@ main {
     border-bottom: 1px solid #aaa;
 }
 
-.footer .footer-center .footer-center-article {
+.footer .footer-center .footer-center-info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.footer-center .footer-center-article p {
+.footer-center .footer-center-info p {
     line-height: 30px;
     margin-top: 2rem;
 }
 
-.footer-center .footer-center-aside h2 {
-    margin-bottom: 1rem
+.footer-center .footer-center-details {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
-.footer-center .footer-center-aside li {
+.footer-center .footer-center-details h2 {
+    margin-bottom: 1rem;
+}
+
+.footer-center .footer-center-details li {
     list-style: none;
     margin-bottom: 1rem;
 }
 
-.footer-center .footer-center-aside li:hover {
+.footer-center .footer-center-details li:hover {
     cursor: pointer;
 }
 
@@ -433,8 +494,14 @@ main {
 
 @media screen and (max-width: 428px) {
 
-    .jumbotron-details {
+    .header .jumbotron-details {
         margin-left: 0 !important;
+    }
+
+    .header .nav .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
     }
 
     .jumbotron-details h1 {
@@ -447,17 +514,13 @@ main {
         min-width: 300px;
     }
 
-    .header .header-chart > img {
-        width: 350px;
+    .header .header-chart {
+        margin-top: 2rem;
     }
     
-    main {
-        margin-top: -233rem !important;
-    }
-
-    .companies-images > img {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
+    .header .header-chart > img {
+        width: 350px;
+        height: 350px;
     }
 
     .features  .feature-one .feature-details h1 {
@@ -485,18 +548,12 @@ main {
         height: 250px !important;
     }
 
+    .waitlist .profile {
+        width: 290px !important;
+    }
+
     .footer {
         margin-top: 0 !important;
-    }
-
-    .footer .footer-top > h2 {
-        font-size: 7vmin !important;
-        width: 200px !important;
-    }
-
-    .footer .footer-top > button {
-        font-size: 4.5vmin !important;
-        height: 40px !important;       
     }
 
     .footer .footer-center {
@@ -504,11 +561,11 @@ main {
         justify-content: space-between;
     }
 
-    .footer .footer-center-article > p {
+    .footer .footer-center-info > p {
         width: 100%;
     }
 
-    .footer .footer-center .footer-center-aside {
+    .footer .footer-center .footer-center-details {
         grid-template-columns: repeat(1, 1fr) !important;
         justify-content: space-between;
     }
@@ -592,6 +649,7 @@ main {
     .services-details .services-details-aside > img {
         margin-top: 2rem;
         width: 300px;
+        height: 300px;
     }
 
     .services-details header > h2 {
@@ -604,13 +662,18 @@ main {
         height: 100px;
     }
 
-    .footer {
-        margin-top: 50rem !important;
+    .waitlist .waitlist-details > h2 {
+        font-size: 7vmin;
+        width: 300px;
     }
 
-    .footer .footer-top > h2 {
-        font-size: 8vmin;
-        width: 300px;
+    .profile {
+        margin-top: 2rem !important;
+        width: 350px !important;
+    }
+
+    .footer {
+        margin-top: 6rem !important;
     }
 
 }
@@ -661,15 +724,11 @@ main {
         flex-direction: column;
     }
 
-    .footer {
-        margin-top: 35rem;
-    }
-
     .footer .footer-center {
        grid-template-columns: repeat(1, 1fr) !important;
     }
 
-    .footer .footer-center .footer-center-aside {
+    .footer .footer-center .footer-center-details {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
@@ -687,11 +746,6 @@ main {
 
     .header .header-chart > img {
         margin-top: 2rem;
-    }
-
-    main {
-        /* margin-top: 54rem; */
-        /* margin-bottom: 35rem; */
     }
 
     .companies {
@@ -739,11 +793,16 @@ main {
         width: 400px;
     }
 
+    main .waitlist {
+        margin-top: 30rem;
+        flex-direction: column;
+    }
+
     .footer .footer-center {
        gap: 4rem;
     }
 
-    .footer .footer-center-aside {
+    .footer .footer-center-details {
         display: grid;
         gap: 20px;
         margin-top: 3rem;
